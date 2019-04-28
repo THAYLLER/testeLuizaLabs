@@ -1,0 +1,153 @@
+<div class="">
+  <div class="card">
+    <div class="card-header">
+        <div class="panel-group" id="filtro_1">
+          <div class="card">
+              <div class="card-header">
+                  <h5 class="card-title">
+                      <a data-toggle="collapse" data-parent="#filtro_1" href="#collapse1" class="form-label">
+                        Filtro por perído de data e tipo de entrada
+                      </a>
+                  </h5>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse">
+                <br><br>
+                <div class="container">
+                  <form class="form-inline" #searchForm="ngForm" (ngSubmit)="buscaPeriodoTipo(dataD.value,dataA.value,tipo.value)" >
+                      <div class="form-group mx-sm-3 mb-4">
+                      <label for="staticEmail2" class="">Data de: </label>
+                      <input type="text" class="form-control" name="dataD" ngModel placeholder="00/00/0000" #dataD>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-4">
+                        <label for="staticEmail2" class="">Data até: </label>
+                        <input type="text" class="form-control" name="dataA" ngModel  placeholder="00/00/0000" #dataA>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-4">
+                      <label for="inputPassword2" class="">Tipo de nfe: </label>
+                      <Select class="form-control"#tipo>
+                        <option value="">Selecione</option>
+                        <option value="E">Entrada</option>
+                        <option value="S">Saída</option>
+                      </Select>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-4">Buscar</button>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="panel-group" id="filtro_2">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">
+                        <a data-toggle="collapse" data-parent="#filtro_2" href="#collapse2" class="form-label">
+                          Filtro por status
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <br><br>
+                  <div class="container">
+                    <form class="form-inline">
+                      <div class="form-group mx-sm-3 mb-4">
+                        <label for="inputPassword2" class="">Status da nfe: </label>
+                        <Select class="form-control" name="status">
+                          <option value="">Selecione</option>
+                          <option value="AUTORIZADO">Autorizado</option>
+                          <option value="CANCELADO">Cancelado</option>
+                          <option value="REJEITADO">Rejeitado</option>
+                          <option value="DENEGADO">Denegado</option>
+                        </Select>
+                      </div>
+                      <button type="submit" class="btn btn-primary mb-4">Buscar</button>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group" id="filtro_3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">
+                        <a data-toggle="collapse" data-parent="#filtro_3" href="#collapse3" class="form-label">
+                          Filtro por documento(cpf ou cnpj)
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <br><br>
+                  <div class="container">
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-4">
+                            <label for="staticEmail2" class="">Cpf pu cpnj: </label>
+                            <input type="text" class="form-control" name="doc" placeholder="Insira somente número">
+                        </div>
+                      <button type="submit" class="btn btn-primary mb-4">Buscar</button>
+                    </form>
+                  </div>
+                </div>
+            </div>
+            <div class="panel-group" id="filtro_4">
+              <div class="card">
+                  <div class="card-header">
+                      <h5 class="card-title">
+                          <a data-toggle="collapse" data-parent="#filtro_4" href="#collapse4" class="form-label">
+                            Filtro por chave
+                          </a>
+                      </h5>
+                  </div>
+                  <div id="collapse4" class="panel-collapse collapse">
+                    <br><br>
+                    <div class="container">
+                      <form class="form-inline">
+                          <div class="form-group mx-sm-3 mb-4">
+                              <label for="staticEmail2" class="">Chave: </label>
+                              <input type="text" class="form-control" name="chave">
+                          </div>
+                        <button type="submit" class="btn btn-primary mb-4">Buscar</button>
+                      </form>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Data</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">CnpjCpf</th>
+          <th scope="col">Numero</th>
+          <th scope="col">Serie</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Chave</th>
+          <th scope="col">ValorTota</th>
+          <th scope="col">ValorProd</th>
+          <th scope="col">ValorICMS</th>
+          <th scope="col">ValorIPI</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nfe of nfe | paginate: { itemsPerPage: 5, currentPage: paginaAtual }; let i = index" >
+          <th scope="row">{{nfe.id}}</th>
+          <th>{{nfe.data}}</th>
+          <th>{{nfe.tipo}}</th>
+          <th>{{nfe.cnpjCpf}}</th>
+          <th>{{nfe.numero}}</th>
+          <th>{{nfe.serie}}</th>
+          <th>{{nfe.modelo}}</th>
+          <th>{{nfe.chave}}</th>
+          <th>{{nfe.valorTotal}}</th>
+          <th>{{nfe.valorProd}}</th>
+          <th>{{nfe.valorICMS}}</th>
+          <th>{{nfe.valorIPI}}</th>
+          <th class="{{nfe.status | lowercase}}">{{nfe.status}}</th>
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+  </div>
+</div>

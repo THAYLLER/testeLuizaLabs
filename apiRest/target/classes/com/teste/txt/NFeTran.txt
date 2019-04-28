@@ -1,0 +1,30 @@
+#IdProc 81256 InitTran Início de transação
+#IdProc 86187 Log ClientConnect
+#IdProc 34635 Log Chave transação NF-e envolvida: 89958861455662550443256825625984378899008104
+#IdProc 60366 Send NF-e recebida pelo servidor. Gerada requisição para a SEFAZ-SP em modo normal.
+#IdProc 27618 Return A SEFAZ autorizou (Protocolo de autorização 725450) a NF-e com sucesso!
+#IdProc 13150 EndTran Fim de transação
+#IdProc 96990 InitTran Início de transação
+#IdProc 220 Log ClientConnect
+#IdProc 41401 Log Chave transação NF-e envolvida: 72494092851953317464101717301780592482317859
+#IdProc 1552 Send NF-e recebida pelo servidor. Gerada requisição para a SEFAZ-SP em modo normal.
+#IdProc 89294 Return A SEFAZ autorizou (Protocolo de autorização 556849) a NF-e com sucesso!
+#IdProc 5513 EndTran Fim de transação
+#IdProc 17768 InitTran Início de transação
+#IdProc 83039 Log ClientConnect
+#IdProc 36906 Log Chave transação NF-e envolvida: 87858963586548951180445277956953889897006459
+#IdProc 33820 Send NF-e recebida pelo servidor. Gerada requisição para a SEFAZ-RS em modo normal.
+#IdProc 17004 Return O cancelamento foi realizado com sucesso
+#IdProc 92765 EndTran Fim de transação
+#IdProc 88531 InitTran Início de transação
+#IdProc 35468 Log ClientConnect
+#IdProc 53750 Log Chave transação NF-e envolvida: 85984243347017654645280157845187110362428363
+#IdProc 80513 Send NF-e recebida pelo servidor. Gerada requisição para a SEFAZ-PR em modo normal.
+#IdProc 31098 Return A SEFAZ rejeitou a NF-e da transação. Motivo: 54
+#IdProc 54112 EndTran Fim de transação
+#IdProc 34373 InitTran Início de transação
+#IdProc 44111 Log ClientConnect
+#IdProc 61910 Log Chave transação NF-e envolvida: 80057061565891739426136412682892929687736864
+#IdProc 10705 Send NF-e recebida pelo servidor. Gerada requisição para a SEFAZ-GO em modo normal.
+#IdProc 25377 Return A SEFAZ autorizou (Protocolo de autorização 385259) a NF-e com sucesso!
+#IdProc 10988 EndTran Fim de transação

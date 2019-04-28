@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.teste.tecnico.luiza.labs.TesteLabsApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.548 sec - in com.teste.tecnico.luiza.labs.TesteLabsApplicationTests

@@ -1,0 +1,35 @@
+Existem 2 arquivos em formato texto que deverão ser processados:
+   NFe.txt 
+      Contém os documentos fiscais. 
+   
+   NFeTran.txt
+      Contém as transações dos documentos fiscais.
+
+
+OK - 1) Criar um Web Services RESTful (formato JSON) que disponibilize os seguintes serviços:
+   Com base no arquivo NFe.txt:    
+      OK - a. Filtro dos documentos fiscais por período e tipo de documento (entrada/saída);
+      OK - b. Filtro de documentos fiscais por chave da NF-e;
+      OK - c. Filtro de documentos fiscais por documento do destinatário;
+      OK - d. Totalizadores (valor total, valor produto, valor ICMS e valor IPI) da movimentação por período e tipo de documento (entrada/saída);
+      OK - e. Filtro dos documentos por status (AUTORIZADO, REJEITADO, DENEGADO e/ou CANCELADO)
+      OK - f. O documento fiscal e suas transações (arquivo NFeTran.txt), onde será realizada sua busca pela Chave.
+   
+   Com base no arquivo NFeTran.txt
+      OK - a. Retorne de forma sintética:
+         OK - i. Quantas transações retornaram erro e detalhe por tipo de erro
+         OK - ii. Quantas transações foram autorizadas com sucesso
+         OK - iii. Estatística por SEFAZ-UFs
+
+2) Criar o frontend para consumo dos serviços criados acima.
+
+# Requisitos
+
+OK - 1. Use a linguagem que você tem mais habilidade (temos preferência por Java, Node.js, Ruby, Golang ou Python, mas poderá ser utilizado qualquer linguagem desde que explicado a preferência).
+OK - 2. As APIs deverão seguir o modelo RESTFul com formato JSON  
+OK - 3. Faça testes unitários, suite de testes bem organizados (atenção especial nesse item).
+OK - 4. Use git e tente fazer commits pequenos e bem descritos.
+OK - 5. Faça pelo menos um README explicando como fazer o setup, uma explicação da solução proposta, o mínimo de documentação para outro desenvolvedor entender seu código
+OK - 6. Siga o que considera boas práticas de programação.
+OK - 7. Após concluir o teste suba em um REPOSITÓRIO PRIVADO e nos mande o link
+OK - 8. Esse teste é único e foi gerado exclusivamente para você.

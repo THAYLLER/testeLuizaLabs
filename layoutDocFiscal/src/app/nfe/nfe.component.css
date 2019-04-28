@@ -1,0 +1,13 @@
+.autorizado {color: green;}
+.cancelado {color: red;}
+.rejeitado {color: orangered;}
+.denegado {color: yellow;}
+
+.glyphicon { margin-right:10px; }
+.panel-body { padding:0px; }
+.panel-body table tr td { padding-left: 15px }
+.panel-body .table {margin-bottom: 0px; }
+
+.form-label { text-decoration: none;color: black}
+.card-title {margin: 0px;}
+.card-header { border: 0px;}
