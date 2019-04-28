@@ -8,7 +8,7 @@
   * [x] SPRING BOOT
 * [x] FrontEnd- API que vai consumir o REST
   * [x] Bootstrap
-  * [x] PHP 5
+  * [x] ANGULAR 4
   
 ## PROPOSTA DESSE PROJETO
 Desenvolver uma api rest, que realize consultas em GET no intuito de filtar informações dos arquivos NFe.txt e NFeTran.txt
